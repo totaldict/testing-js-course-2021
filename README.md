@@ -1,1 +1,1 @@
-# testing-js-course-2021
+# Курс "Тестирование JavaScript-приложений"
