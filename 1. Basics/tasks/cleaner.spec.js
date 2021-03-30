@@ -1,4 +1,3 @@
-import { exportAllDeclaration, isTaggedTemplateExpression } from '@babel/types';
 import Cleaner from './cleaner';
 
 describe('Cleaning', () => {
@@ -9,12 +8,13 @@ describe('Cleaning', () => {
     const cleaner = new Cleaner(source);
     
     cleaner.removeFalsyValues();
-    cleaner.arr.forEach((element, idx) => expect(element).toEqual(result[idx]));
+    cleaner.arr.forEach(
+      (element, idx) => expect(element).toEqual(result[idx])
+    );
   })
 
   it('test with incorrect argument', () => {
     const source = 'hello';
-    const result = null;
 
     const cleaner = new Cleaner(source);
 

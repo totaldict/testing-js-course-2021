@@ -6,7 +6,6 @@ class Cleaner {
   removeFalsyValues() {
     this.arr = this.arr.filter(item => item);
   } 
-  
 }
 
 export default Cleaner;
