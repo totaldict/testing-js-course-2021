@@ -1,6 +1,19 @@
 import TodoItem from './todo-item.js';
 
 class TodoList {
+
+  /* names: [
+      {
+        name: 'Сврить борщ',
+        isDone: false
+      },
+      {
+        name: 'Сходить в тренажерный зал',
+        isDone: false
+      }
+    ]
+  */
+
   constructor(names = []) {
     this.items = names.map((name) => new TodoItem(name));
   }

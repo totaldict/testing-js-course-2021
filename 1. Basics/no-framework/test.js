@@ -3,9 +3,9 @@ import TodoList from './todo-list.js';
 function todoListCanAddItem() {
   // Arrange
   let list = new TodoList();
+  let itemName = 'test';
 
   //Act
-  let itemName = 'test';
   list.addItem(itemName);
 
   //Assert
@@ -17,9 +17,9 @@ function todoListCanAddItem() {
 function todoListCanCheckItem() {
   // Arrange
   let list = new TodoList(['item1', 'item2']);
+  let itemNumber = 1;
 
   //Act
-  let itemNumber = 1;
   list.done(itemNumber);
 
   //Assert
@@ -30,3 +30,4 @@ function todoListCanCheckItem() {
 
 todoListCanAddItem();
 todoListCanCheckItem();
+
