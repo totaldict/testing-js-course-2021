@@ -1,4 +1,5 @@
 /* global chance */
+// console.log('2. Запуск main.js')
 document.getElementById('issueInputForm').addEventListener('submit', saveIssue);
 
 function saveIssue(e) {
@@ -36,7 +37,7 @@ function saveIssue(e) {
 // eslint-disable-next-line no-unused-vars
 function setStatusClosed(id) {
   var issues = JSON.parse(localStorage.getItem('issues'));
-
+  console.log('issues', issues)
   for (var i = 0; i < issues.length; i++) {
     if (issues[i].id == id) {
       issues[i].status = 'Closed';
@@ -87,3 +88,9 @@ function fetchIssues() {
                               '</div>';
   }
 }
+
+export default {
+  saveIssue,
+  setStatusClosed,
+  deleteIssue,
+};
