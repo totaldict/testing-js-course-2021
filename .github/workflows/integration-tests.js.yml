@@ -42,7 +42,5 @@ jobs:
     - name: Archive production artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: dist-without-markdown
-        path: |
-          cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
-          dist/*.*
+        name: my-artifacts
+        path: /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture/dist/
