@@ -35,7 +35,7 @@ jobs:
       run: npm test
 
     - name: Run build
-      run: npm test
+      run: npm run build
 
     - name: Stop JSON Server
       run: pm2 stop all
