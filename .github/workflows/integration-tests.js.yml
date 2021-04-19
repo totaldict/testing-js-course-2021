@@ -35,7 +35,7 @@ jobs:
 
     - name: Run build
       run: |
-        cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
+        cd /home/runner/work/testing-js-course-2021/4-Integration-Testing/good-architecture
         npm add @babel/core @babel/core @babel/preset-env
         npm run build
 
@@ -44,5 +44,5 @@ jobs:
       with:
         name: dist-without-markdown
         path: |
-          cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
+          cd /home/runner/work/testing-js-course-2021/4-Integration-Testing/good-architecture
           dist/*
