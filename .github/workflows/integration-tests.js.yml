@@ -38,3 +38,11 @@ jobs:
         cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
         npm add @babel/core @babel/core @babel/preset-env
         npm run build
+
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-without-markdown
+        path: |
+          dist
+          !dist/**/*.md
