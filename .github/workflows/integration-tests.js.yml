@@ -44,5 +44,5 @@ jobs:
       with:
         name: dist-without-markdown
         path: |
-          dist
-          !dist/**/*.md
+          cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
+          dist/*
