@@ -11,8 +11,7 @@ jobs:
 
     - name: Set folder
       run: |
-        cd 4-Integration-Testing
-        cd good-architecture
+        cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
 
     - name: Setup Node.js
       uses: actions/setup-node@v1
