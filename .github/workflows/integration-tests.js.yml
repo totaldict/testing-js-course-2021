@@ -30,10 +30,11 @@ jobs:
     - name: Run tests
       run: npm test
 
+    - name: Stop JSON Server
+      run: pm2 stop all
+
     - name: Run build
       run: |
         cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
+        npm add @babel/core @babel/core @babel/preset-env
         npm run build
-
-    - name: Stop JSON Server
-      run: pm2 stop all
