@@ -9,10 +9,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Set folder
-      run: |
-        cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
-
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
@@ -35,7 +31,9 @@ jobs:
       run: npm test
 
     - name: Run build
-      run: npm run build
+      run: |
+        cd /home/runner/work/testing-js-course-2021/testing-js-course-2021/4-Integration-Testing/good-architecture
+        npm run build
 
     - name: Stop JSON Server
       run: pm2 stop all
