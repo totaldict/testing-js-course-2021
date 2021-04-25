@@ -4,7 +4,7 @@ import DataService from '../src/data-service';
 
 describe('Todo List tests', () => {
 
-  xit('Load items sucessfully', async () => {
+  test('Load items sucessfully', async () => {
     // Arrange
     expect.hasAssertions();
 
