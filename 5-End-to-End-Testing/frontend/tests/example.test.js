@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-test('Error on existing user', async () => {
+xit('Error on existing user', async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('http://127.0.0.1:8080/#/register');

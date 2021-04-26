@@ -4,7 +4,7 @@ import RegisterPage from '../pages/register-page';
 describe('Regesration Tests', () => {
   const page = new RegisterPage();
 
-  it('User resgistration is filed when username is already exists', () => {
+  xit('User resgistration is filed when username is already exists', () => {
     page.open('http://localhost:8080/#/register');
     page.enterUsername('Evgeniy');
     page.enterEmail('test@test.ru');

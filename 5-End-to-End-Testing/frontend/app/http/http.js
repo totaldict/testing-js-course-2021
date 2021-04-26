@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+import * as _ from 'lodash';
 import {Authentication} from "../auth/authentication";
 import {config} from "../config";
 import {RouterHandler} from "../router/router-handler";
@@ -24,9 +26,9 @@ export class Http {
         };
 
         if (authentication === true) {
-            const auth = Authentication.instance.auth;
-            if(auth) {
-                headers['Authorization'] = 'Token ' + auth.token;
+            const instance = Authentication.instance;
+            if(instance && instance.auth) {
+                headers['Authorization'] = 'Token ' + instance.auth.token;
             }
         }
         return fetch(config.rest_url + path, {
@@ -39,7 +41,6 @@ export class Http {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json',
         };
-
         if (authentication === true) {
             const auth = Authentication.instance.auth;
             var token = null;
@@ -59,6 +60,7 @@ export class Http {
             method: 'POST',
             body: body
         }).then(response => {
+            if (_.isEmpty(response)) return;
             if (response.status === 401) {
                 RouterHandler.instance.router.navigate('#/login');
             }

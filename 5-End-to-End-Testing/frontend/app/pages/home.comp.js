@@ -158,7 +158,6 @@ export class HomeComponent extends HTMLElement {
     fetchArticles(params, auth) {
         this.cleanGlobalFeed();
         this.$globalFeed.innerHTML = '<div class="article-preview">Loading articles </div>';
-
         Http.instance.doGet('/articles' + params, auth).then(function (response) {
             return response.json();
         }).then(r => {
