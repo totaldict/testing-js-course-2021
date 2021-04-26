@@ -30,7 +30,7 @@ describe('Integration Tests for IssuesDataStorage', () => {
     }
   ];
 
-  test('Issue creates successfuly', async () => {
+  xit('Issue creates successfuly', async () => {
     // Arrange
     const ds = new RestApiStorageDataService(BACKEND_URL);
     const ids = new IssuesDataStorage(ds);
